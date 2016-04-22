@@ -1,6 +1,6 @@
 $fn = 180;
 
-solar_light_radius = 54.8 / 2 + 0.5;
+solar_light_radius = 54.8 / 2 + 0.25; // plus a little room for putting the light in the hole
 solar_light_height = 30.5;
 solar_led_width = 8.5;
 
@@ -35,8 +35,8 @@ module hook () {
                         [0,0],
                         [-height, 0], // top corner
                         [-height, -width], // other top corner
-                        [-height+top_thickness+wall_thickness/2, -width],
-                        [-height+top_thickness+wall_thickness/2, -width+wall_thickness],
+                        [-height+top_thickness, -width],
+                        [-height+top_thickness+wall_thickness, -width+wall_thickness],
                         [-height+top_thickness, -width+wall_thickness], // inside corner
                         [-height+top_thickness, -wall_thickness], // other inside corner
                         [-wall_thickness, -wall_thickness], // other inside corner
